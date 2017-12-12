@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+
+publish_mode: editorial_workflow
+media_folder: "static/uploads"
+
+collections:
+  - name: 'bike'
+    label: 'Bike'
+    folder: '_content/bike'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Description', name: 'description', widget: 'markdown' }
