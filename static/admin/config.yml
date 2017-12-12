@@ -13,6 +13,7 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
+      - { label: '_layout', name: 'layout', widget: 'hidden', default: 'bike.html' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Type', name: 'type', widget: 'string' }
