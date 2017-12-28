@@ -38,7 +38,7 @@ if (argv.dev) {
   site.use(watch({
     paths: {
       "${source}/**/*": true,
-      "_layouts/**/*": "**/*.md",
+      "_layouts/**/*": "**/*",
     }
   }));
 }

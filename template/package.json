@@ -1,0 +1,11 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tailwind build app.css -c ./tailwind.js -o style.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^0.4.0"
+  }
+}

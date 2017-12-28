@@ -1,0 +1,14 @@
+@tailwind preflight;
+@tailwind utilities;
+
+.transition-all-ease {
+    transition: all .3s ease;
+}
+
+.btn {
+    @apply .bg-orange .px-8 .py-4 .uppercase .no-underline .text-white .border .border-transparent .transition-all-ease;
+}
+
+.btn:hover {
+    @apply .bg-transparent .border-white
+}
