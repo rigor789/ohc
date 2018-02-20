@@ -1,5 +1,5 @@
 ---
-name: Test
+name: Test2
 featured_image: /uploads/1.jpg
 images: 
   - /uploads/1.jpg

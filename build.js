@@ -24,7 +24,7 @@ let site = Metalsmith(__dirname)
   .use(markdown())
   .use(layouts({
     engine: 'handlebars',
-    default: 'layout.html',
+    default: 'bike.html',
     directory: '_layouts'
   }))
   .use(assets({

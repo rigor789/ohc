@@ -2,7 +2,9 @@
   "name": "ohc",
   "version": "1.0.0",
   "scripts": {
+    "prepare": "cd template && npm i && npm run build && cp style.css ../static",
     "build": "node build.js",
+    "build:full": "npm run prepare && npm run build",
     "dev": "node build.js --dev"
   },
   "dependencies": {

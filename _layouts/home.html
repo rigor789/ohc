@@ -1,12 +1,130 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-    <title>{{title}} - OHC</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OHC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-{{#each bike}}
-    <h2>{{ this.title }}</h2>
-{{/each}}
+<div id="app" class="font-sans">
+    <div class="bg-blue-darkest border-t-8 border-orange">
+        <div class="container mx-auto">
 
+            <div class="flex flex-col md:flex-row md:items-center px-0 md:px-4 py-4 ">
+                <!-- logo -->
+                <div class="flex-1">
+                    <a href="/" class="no-underline text-white uppercase font-bold hover:text-orange flex items-center">
+                        <img class="w-12 h-12 mr-4" src="http://placehold.it/200" alt="Only Harley Choppers">
+                        Only Harley Choppers
+                    </a>
+                </div>
+
+                <!-- menu -->
+                <div class="mt-4 md:mt-0 flex flex-col md:flex-row">
+                    <a href="#"
+                       class="mt-4 md:mt-0 no-underline text-white uppercase hover:text-orange mr-4">Főoldal</a>
+                    <a href="#" class="mt-4 md:mt-0 no-underline text-white uppercase hover:text-orange mr-4">Eladó
+                        motorok</a>
+                    <a href="#" class="mt-4 md:mt-0 no-underline text-white uppercase hover:text-orange">Kapcsolat</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mx-auto w-1/2">
+        <h3 class="uppercase text-center m-16">Eladó Motorjaink</h3>
+
+        <div class="flex -m-4 flex-wrap">
+            {{#each bike}}
+
+            <div class="w-full p-4 no-underline text-grey-darkest">
+                <div class="flex bg-grey-lightest">
+                    <div class="w-1/2 p-8">
+                        <div class="text-5xl">{{ name }}</div>
+
+                        <ul class="list-reset mt-4">
+                            <li>
+                                <strong>Year</strong>: {{ year }}
+                            </li>
+                            <li>
+                                <strong>Mileage</strong>: {{ mileage }}
+                            </li>
+                            <li>
+                                <strong>Cubic Capacity</strong>: {{ cc }}
+                            </li>
+                            <li>
+                                <strong>Price</strong>: <span class="font-bold text-orange">{{ price }}</span>
+                            </li>
+                        </ul>
+
+                        <h2 class="mt-4">Info</h2>
+                        <div class="mt-2">
+                            {{{ contents }}}
+                        </div>
+                    </div>
+
+                    <div class="w-1/2 p-8">
+                        <img src="{{ featured_image }}" alt="{{ name }}">
+                    </div>
+                </div>
+                
+                <div class="bg-grey-light flex flex-wrap">
+                    {{#each images}}
+                    <img class="w-1/6 p-2" src="{{ this }}" alt="{{ ../name }}">
+                    {{/each}}
+                </div>
+            </div>
+
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="bg-grey-dark mt-16">
+        <div class="flex flex-wrap">
+            <div class="w-full md:w-1/2">
+                <iframe class="w-full h-64 md:h-full"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1357.4210570236505!2d19.429855058344195!3d47.12176559478882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741869152129639%3A0x1f1977e639815dfa!2sT%C3%A1jfun+System+Kft.!5e0!3m2!1shu!2shu!4v1510690013790"
+                        allowfullscreen=""></iframe>
+            </div>
+            <div class="w-full md:w-1/2">
+                <div class="py-16 px-8 text-white">
+                    <div class="uppercase">Kapcsolat</div>
+
+                    <ul class="list-reset">
+                        <li class="flex items-center py-4">
+                            <i class="mr-4">ICON</i>
+                            Hrubos János
+                        </li>
+                        <li class="flex items-center py-4">
+                            <i class="mr-4">ICON</i>
+                            + 36 20 123 456
+                        </li>
+                        <li class="flex items-center py-4">
+                            <i class="mr-4">ICON</i>
+                            contact@example.com
+                        </li>
+                        <li class="flex items-center py-4">
+                            <i class="mr-4">ICON</i>
+                            Örkény 2377, Ilonamajori út 1.
+                        </li>
+                        <li class="flex items-center py-2">
+                            <a href="#" class="btn mt-4">
+                                Útvonaltervezés
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-grey-darkest text-center text-white py-4">
+        Copyright &copy; 2017 - Minden Jog Fenntartva - onlyharley.net
+    </div>
+</div>
 </body>
 </html>
